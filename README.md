@@ -31,6 +31,22 @@ Read the full study notes here:
 
 - [GUIDE.md](GUIDE.md)
 
+## LeetCode Practice
+
+Pattern-based solved examples live in:
+
+- [leetcode/README.md](leetcode/README.md)
+
+Current examples:
+
+| Pattern | Problem | File |
+|---|---|---|
+| Hash map | Two Sum | [leetcode/hashmap/two-sum.go](leetcode/hashmap/two-sum.go) |
+| Stack | Valid Parentheses | [leetcode/stack/valid-parentheses.go](leetcode/stack/valid-parentheses.go) |
+| Sliding window | Longest Substring Without Repeating Characters | [leetcode/sliding-window/longest-substring.go](leetcode/sliding-window/longest-substring.go) |
+| Two pointers | Container With Most Water | [leetcode/two-pointers/container-with-most-water.go](leetcode/two-pointers/container-with-most-water.go) |
+| Two pointers | Trapping Rain Water | [leetcode/two-pointers/trapping-rain-water.go](leetcode/two-pointers/trapping-rain-water.go) |
+
 ## Interview Highlights
 
 - Binary search needs sorted data or a monotonic condition.
@@ -39,4 +55,3 @@ Read the full study notes here:
 - DFS is natural for components, recursion, and backtracking.
 - Dynamic programming stores answers to repeated subproblems.
 - Greedy works only when local best choices lead to the global best answer.
-
