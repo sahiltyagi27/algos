@@ -30,6 +30,7 @@ go test ./...
 Read the full study notes here:
 
 - [GUIDE.md](GUIDE.md)
+- [NEETCODE_ROADMAP.md](NEETCODE_ROADMAP.md)
 
 ## LeetCode Practice
 
@@ -46,6 +47,22 @@ Current examples:
 | Sliding window | Longest Substring Without Repeating Characters | [leetcode/sliding-window/longest-substring.go](leetcode/sliding-window/longest-substring.go) |
 | Two pointers | Container With Most Water | [leetcode/two-pointers/container-with-most-water.go](leetcode/two-pointers/container-with-most-water.go) |
 | Two pointers | Trapping Rain Water | [leetcode/two-pointers/trapping-rain-water.go](leetcode/two-pointers/trapping-rain-water.go) |
+
+## Pattern Coverage
+
+Additional NeetCode-style patterns live in:
+
+- [patterns/prefixsum](patterns/prefixsum)
+- [patterns/intervals](patterns/intervals)
+- [patterns/trie](patterns/trie)
+- [patterns/monotonicstack](patterns/monotonicstack)
+- [patterns/unionfind](patterns/unionfind)
+- [patterns/topologicalsort](patterns/topologicalsort)
+- [patterns/dp2d](patterns/dp2d)
+- [patterns/bitmanipulation](patterns/bitmanipulation)
+- [patterns/mathgeometry](patterns/mathgeometry)
+- [patterns/binarysearchanswer](patterns/binarysearchanswer)
+- [patterns/advancedgraphs](patterns/advancedgraphs)
 
 ## Interview Highlights
 
