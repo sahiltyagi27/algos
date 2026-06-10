@@ -19,6 +19,7 @@ go test ./...
 | Two pointers | [algorithms/two_pointers.go](algorithms/two_pointers.go) |
 | Sliding window | [algorithms/sliding_window.go](algorithms/sliding_window.go) |
 | BFS and DFS | [algorithms/graph_traversal.go](algorithms/graph_traversal.go) |
+| Grid DFS and surrounded city components | [algorithms/graph_traversal.go](algorithms/graph_traversal.go) |
 | Dijkstra shortest path | [algorithms/shortest_path.go](algorithms/shortest_path.go) |
 | Dynamic programming | [algorithms/dynamic_programming.go](algorithms/dynamic_programming.go) |
 | Greedy algorithms | [algorithms/greedy.go](algorithms/greedy.go) |
@@ -70,5 +71,6 @@ Additional NeetCode-style patterns live in:
 - Sliding window usually optimizes contiguous subarray or substring problems.
 - BFS is natural for shortest paths in unweighted graphs.
 - DFS is natural for components, recursion, and backtracking.
+- For grid DFS, clarify whether the interviewer means individual cells or connected components.
 - Dynamic programming stores answers to repeated subproblems.
 - Greedy works only when local best choices lead to the global best answer.

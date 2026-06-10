@@ -124,6 +124,9 @@ Common graph interview questions:
 - shortest path in unweighted graph
 - cycle detection
 - topological sort
+- grid DFS with four-direction traversal
+
+For grid questions, clarify whether you are counting individual cells or connected components. If the question only asks whether a single cell is surrounded on four sides, a scan is enough. If connected `1`s form one region, use DFS or BFS and track visited cells.
 
 ---
 
@@ -239,4 +242,3 @@ This repo includes an anagram check and a clear naive substring search.
 | Dynamic programming | repeated subproblems |
 | Greedy | local best choice is globally correct |
 | Backtracking | enumerate valid combinations |
-
