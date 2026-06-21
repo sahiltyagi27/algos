@@ -24,7 +24,7 @@ Use it as a checklist when practicing LeetCode-style interviews.
 | Heap / Priority Queue | Covered in data structures repo | `data structures/structures/heap.go` |
 | Backtracking | Covered | [algorithms/backtracking.go](algorithms/backtracking.go) |
 | Graphs | Covered | [algorithms/graph_traversal.go](algorithms/graph_traversal.go) |
-| Topological Sort | Covered | [patterns/topologicalsort/course_schedule.go](patterns/topologicalsort/course_schedule.go) |
+| Topological Sort | Covered | [patterns/topologicalsort/README.md](patterns/topologicalsort/README.md), [patterns/topologicalsort/course_schedule.go](patterns/topologicalsort/course_schedule.go) |
 | Union Find | Covered | [patterns/unionfind/union_find.go](patterns/unionfind/union_find.go) |
 | Advanced Graphs | Covered basics | [patterns/advancedgraphs/bellman_ford.go](patterns/advancedgraphs/bellman_ford.go) |
 | 1-D Dynamic Programming | Covered | [algorithms/dynamic_programming.go](algorithms/dynamic_programming.go) |
@@ -84,4 +84,3 @@ Recommended next problems:
 - Kth Largest Element
 - Top K Frequent Elements
 - Meeting Rooms II
-

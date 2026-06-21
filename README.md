@@ -21,6 +21,7 @@ go test ./...
 | BFS and DFS | [algorithms/graph_traversal.go](algorithms/graph_traversal.go) |
 | Grid DFS and surrounded city components | [algorithms/graph_traversal.go](algorithms/graph_traversal.go) |
 | Dijkstra shortest path | [algorithms/shortest_path.go](algorithms/shortest_path.go) |
+| Topological sort / Course Schedule | [patterns/topologicalsort/README.md](patterns/topologicalsort/README.md) |
 | Dynamic programming | [algorithms/dynamic_programming.go](algorithms/dynamic_programming.go) |
 | Greedy algorithms | [algorithms/greedy.go](algorithms/greedy.go) |
 | Backtracking | [algorithms/backtracking.go](algorithms/backtracking.go) |
@@ -58,7 +59,7 @@ Additional NeetCode-style patterns live in:
 - [patterns/trie](patterns/trie)
 - [patterns/monotonicstack](patterns/monotonicstack)
 - [patterns/unionfind](patterns/unionfind)
-- [patterns/topologicalsort](patterns/topologicalsort)
+- [patterns/topologicalsort](patterns/topologicalsort/README.md)
 - [patterns/dp2d](patterns/dp2d)
 - [patterns/bitmanipulation](patterns/bitmanipulation)
 - [patterns/mathgeometry](patterns/mathgeometry)
