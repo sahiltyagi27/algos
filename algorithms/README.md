@@ -2,6 +2,19 @@
 
 This folder contains small readable implementations of common algorithm families.
 
+## Vanilla Go Rule
+
+For interview practice:
+
+```text
+BFS queue -> []int or []string
+DFS stack -> []int or []string
+Visited set -> []bool or map[T]bool
+Numbered graph -> [][]int
+```
+
+Do not add custom stack/queue/set helpers to algorithm solutions unless the problem asks for that data structure.
+
 ## Files
 
 | Topic | File |

@@ -2,6 +2,20 @@
 
 Small Go algorithm examples for interview preparation.
 
+## DSA Interview Coding Rule
+
+For live coding, keep Go code vanilla and writable from memory.
+
+```text
+Queue   = []int, append to push, queue[0] + queue = queue[1:] to pop
+Stack   = []int, append to push, stack[len(stack)-1] + stack = stack[:len(stack)-1] to pop
+Set     = map[T]bool, or []bool for 0..n-1 nodes
+Graph   = [][]int for 0..n-1 nodes
+Visited = []bool for 0..n-1 nodes
+```
+
+Avoid custom `Stack`, `Queue`, or `Set` structs in DSA interview solutions unless the problem explicitly asks you to implement that data structure.
+
 ## Run
 
 ```bash

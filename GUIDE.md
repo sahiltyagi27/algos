@@ -5,6 +5,29 @@
 
 ---
 
+## DSA Interview Coding Rule
+
+For DSA interview practice in Go, avoid custom `Stack` or `Queue` structs unless explicitly needed.
+
+Prefer vanilla Go:
+
+```text
+Queue   = []int with append for push and queue[0], queue = queue[1:] for pop
+Stack   = []int with append for push and stack[len(stack)-1], stack = stack[:len(stack)-1] for pop
+Set     = map[T]bool, or []bool for numbered nodes
+Graph   = [][]int when nodes are 0..n-1
+Visited = []bool when nodes are 0..n-1
+```
+
+Interview rule:
+
+```text
+If problem is DSA/interview -> use simple slices/maps.
+If problem is production/library design -> custom queue/stack can be okay.
+```
+
+---
+
 ## What Are Algorithms?
 
 An algorithm is a step-by-step method for solving a problem.
