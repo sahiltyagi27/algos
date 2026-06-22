@@ -1,4 +1,19 @@
 // Package dp2d contains two-dimensional dynamic programming patterns.
+//
+// Unique Paths visual:
+//
+//	Start at top-left, reach bottom-right.
+//	Only moves: right or down.
+//
+//	+---+---+---+
+//	| S |   |   |
+//	+---+---+---+
+//	|   |   | E |
+//	+---+---+---+
+//
+// Ways to reach a cell:
+//
+//	from top + from left
 package dp2d
 
 // UniquePaths returns how many ways a robot can move from top-left to

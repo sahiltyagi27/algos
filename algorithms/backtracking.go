@@ -8,11 +8,29 @@
 //   - subsets
 //   - combination sum
 //   - Sudoku / N-Queens
+//
+// Template:
+//
+//	choose
+//	explore
+//	unchoose
+//
+// Permutations visual for [1,2]:
+//
+//	        []
+//	      /    \
+//	    [1]    [2]
+//	    /        \
+//	 [1,2]     [2,1]
 
 package algorithms
 
 import "fmt"
 
+// Permutations tries every unused number at each position.
+//
+// path is the current partial answer.
+// used prevents reusing the same index twice.
 func Permutations(nums []int) [][]int {
 	var result [][]int
 	used := make([]bool, len(nums))

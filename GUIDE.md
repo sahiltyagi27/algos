@@ -34,6 +34,18 @@ Linear search checks every item. It works on unsorted data and costs O(n).
 
 Binary search requires sorted data. It repeatedly halves the search space and costs O(log n).
 
+Binary search visual:
+
+```text
+sorted: [1, 3, 6, 8, 10]
+         L     M      R
+
+target > nums[M]
+
+sorted: [1, 3, 6, 8, 10]
+                  L   R
+```
+
 Interview line:
 
 > Use binary search when the input is sorted or when the answer space has a monotonic true/false condition.
@@ -43,6 +55,20 @@ Interview line:
 ## 2. Sorting — `algorithms/sort.go`
 
 Sorting puts data in order so later operations become easier.
+
+Merge sort visual:
+
+```text
+[5, 1, 9, 3]
+    split
+[5, 1] [9, 3]
+    split
+[5] [1] [9] [3]
+    merge
+[1, 5] [3, 9]
+    merge
+[1, 3, 5, 9]
+```
 
 | Algorithm | Time | Space | Notes |
 |---|---|---|---|
@@ -80,6 +106,13 @@ Common recursion topics:
 
 Two pointers scan from two positions.
 
+Visual:
+
+```text
+nums: [1, 2, 4, 7, 11]
+       L              R
+```
+
 Common patterns:
 
 - left and right ends of a sorted array
@@ -97,6 +130,16 @@ Examples:
 ## 5. Sliding Window — `algorithms/sliding_window.go`
 
 Sliding window keeps a moving range over an array or string.
+
+Visual:
+
+```text
+nums: [2, 1, 5, 1, 3, 2], k=3
+       [2, 1, 5]
+          [1, 5, 1]
+             [5, 1, 3]
+                [1, 3, 2]
+```
 
 Fixed-size window:
 
@@ -118,6 +161,19 @@ BFS uses a queue and explores level by level.
 
 DFS uses recursion or a stack and explores deep before backtracking.
 
+Visual:
+
+```text
+      A
+    /   \
+   B     C
+  /       \
+ D         E
+
+BFS: A, B, C, D, E
+DFS: A, B, D, C, E
+```
+
 Common graph interview questions:
 
 - connected components
@@ -133,6 +189,15 @@ For grid questions, clarify whether you are counting individual cells or connect
 ## 7. Shortest Path — `algorithms/shortest_path.go`
 
 Dijkstra's algorithm finds shortest paths in weighted graphs with non-negative weights.
+
+Relaxation visual:
+
+```text
+current -> neighbor with weight w
+
+if dist[current] + w < dist[neighbor]:
+    update dist[neighbor]
+```
 
 Important note:
 
@@ -152,6 +217,15 @@ Production-style implementation:
 ## 8. Dynamic Programming — `algorithms/dynamic_programming.go`
 
 Dynamic programming stores answers to repeated subproblems.
+
+DP table visual:
+
+```text
+Fibonacci:
+
+index: 0  1  2  3  4  5
+dp:    0  1  1  2  3  5
+```
 
 Use DP when the problem has:
 
@@ -193,6 +267,16 @@ Classic examples:
 ## 10. Backtracking — `algorithms/backtracking.go`
 
 Backtracking tries choices, explores, then undoes the choice.
+
+Visual:
+
+```text
+        []
+      /    \
+    [1]    [2]
+    /        \
+ [1,2]     [2,1]
+```
 
 Template:
 

@@ -1,4 +1,11 @@
 // Package monotonicstack contains monotonic stack patterns.
+//
+// Monotonic decreasing stack visual:
+//
+//	temperatures: [73, 74, 75, 71]
+//	stack holds indexes whose warmer day has not been found yet
+//
+//	When 74 appears, it pops 73 because 74 is warmer.
 package monotonicstack
 
 // DailyTemperatures returns how many days until a warmer temperature.

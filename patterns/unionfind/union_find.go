@@ -1,4 +1,14 @@
 // Package unionfind contains disjoint-set union patterns.
+//
+// Union-Find visual:
+//
+//	Before union(1,2):
+//	1    2    3
+//
+//	After union(1,2):
+//	1 -- 2    3
+//
+// Find(x) returns the representative/root of x's group.
 package unionfind
 
 // UnionFind tracks connected components.
@@ -12,6 +22,9 @@ type UnionFind struct {
 	rank   []int
 }
 
+// New starts every node as its own parent.
+//
+//	parent[i] = i
 func New(n int) *UnionFind {
 	parent := make([]int, n)
 	rank := make([]int, n)
@@ -21,6 +34,16 @@ func New(n int) *UnionFind {
 	return &UnionFind{parent: parent, rank: rank}
 }
 
+// Find returns the root representative.
+//
+// Path compression makes future finds faster:
+//
+//	1 -> 2 -> 3
+//
+// becomes:
+//
+//	1 -> 3
+//	2 -> 3
 func (uf *UnionFind) Find(x int) int {
 	if uf.parent[x] != x {
 		uf.parent[x] = uf.Find(uf.parent[x])
@@ -28,6 +51,9 @@ func (uf *UnionFind) Find(x int) int {
 	return uf.parent[x]
 }
 
+// Union connects two components.
+//
+// It returns false when a and b were already connected.
 func (uf *UnionFind) Union(a, b int) bool {
 	rootA := uf.Find(a)
 	rootB := uf.Find(b)

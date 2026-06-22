@@ -1,4 +1,15 @@
 // Package binarysearchanswer contains binary-search-on-answer patterns.
+//
+// Binary search on answer visual:
+//
+//	possible speeds: 1 ... maxPile
+//
+//	If speed=mid works, try smaller speeds.
+//	If speed=mid fails, try larger speeds.
+//
+// This works because the condition is monotonic:
+//
+//	if speed x works, any speed greater than x also works.
 package binarysearchanswer
 
 // MinEatingSpeed solves the Koko Eating Bananas pattern.

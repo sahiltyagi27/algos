@@ -2,6 +2,14 @@
 //
 // Sliding window keeps a moving range over an array/string.
 //
+// Visual:
+//
+//	nums: [2, 1, 5, 1, 3, 2], k=3
+//	       [2, 1, 5]
+//	          [1, 5, 1]
+//	             [5, 1, 3]
+//	                [1, 3, 2]
+//
 // Fixed-size window:
 //   Useful for "best sum of k consecutive elements".
 //
@@ -12,6 +20,12 @@ package algorithms
 
 import "fmt"
 
+// MaxSumSubarray keeps the sum of exactly k items.
+//
+// Slide by:
+//
+//	add new right value
+//	remove value that left the window
 func MaxSumSubarray(nums []int, k int) int {
 	if k <= 0 || k > len(nums) {
 		return 0
@@ -34,6 +48,14 @@ func MaxSumSubarray(nums []int, k int) int {
 	return best
 }
 
+// LongestUniqueSubstring uses a variable-size window.
+//
+// Window:
+//
+//	left ... right
+//
+// If s[right] was last seen inside the current window, move left after the
+// previous occurrence.
 func LongestUniqueSubstring(s string) int {
 	lastSeen := make(map[byte]int)
 	left := 0

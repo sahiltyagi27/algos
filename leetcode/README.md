@@ -6,11 +6,11 @@ Solved Go examples organized by interview pattern.
 
 | Pattern | Problem | File |
 |---|---|---|
-| Hash map | Two Sum | [hashmap/two-sum.go](hashmap/two-sum.go) |
-| Stack | Valid Parentheses | [stack/valid-parentheses.go](stack/valid-parentheses.go) |
-| Sliding window | Longest Substring Without Repeating Characters | [sliding-window/longest-substring.go](sliding-window/longest-substring.go) |
-| Two pointers | Container With Most Water | [two-pointers/container-with-most-water.go](two-pointers/container-with-most-water.go) |
-| Two pointers | Trapping Rain Water | [two-pointers/trapping-rain-water.go](two-pointers/trapping-rain-water.go) |
+| Hash map | Two Sum | [hashmap/README.md](hashmap/README.md) |
+| Stack | Valid Parentheses | [stack/README.md](stack/README.md) |
+| Sliding window | Longest Substring Without Repeating Characters | [sliding-window/README.md](sliding-window/README.md) |
+| Two pointers | Container With Most Water | [two-pointers/README.md](two-pointers/README.md) |
+| Two pointers | Trapping Rain Water | [two-pointers/README.md](two-pointers/README.md) |
 
 ## How To Use
 

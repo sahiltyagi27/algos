@@ -5,11 +5,29 @@
 //   - optimal substructure
 //
 // Instead of recomputing the same answer many times, store previous results.
+//
+// Fibonacci visual:
+//
+//	F(5)
+//	= F(4) + F(3)
+//
+// Without DP, F(3), F(2), etc. are recomputed many times.
+//
+// DP table:
+//
+//	index: 0  1  2  3  4  5
+//	dp:    0  1  1  2  3  5
 
 package algorithms
 
 import "fmt"
 
+// Fibonacci uses bottom-up tabulation.
+//
+// dp[i] means Fibonacci number at i.
+// Transition:
+//
+//	dp[i] = dp[i-1] + dp[i-2]
 func Fibonacci(n int) int {
 	if n <= 1 {
 		return n
@@ -23,6 +41,14 @@ func Fibonacci(n int) int {
 	return dp[n]
 }
 
+// ClimbStairs is Fibonacci-like.
+//
+// ways[n] = ways[n-1] + ways[n-2]
+//
+// To reach step n, the last move came from:
+//
+//	n-1 using 1 step
+//	n-2 using 2 steps
 func ClimbStairs(n int) int {
 	if n <= 2 {
 		return n

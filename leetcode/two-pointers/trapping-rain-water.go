@@ -2,6 +2,13 @@ package twopointers
 
 // Trap solves Trapping Rain Water.
 //
+// Visual:
+//
+//	height: [0,1,0,2]
+//	          _
+//	     _   | |
+//	 _  | | water can sit above lower bars
+//
 // Pattern:
 //
 //	Water at a position depends on the smaller of max wall on the left and

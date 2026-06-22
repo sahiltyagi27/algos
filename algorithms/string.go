@@ -6,11 +6,29 @@
 // This file includes:
 //   - anagram check using counts
 //   - naive substring search for clarity
+//
+// Frequency map visual:
+//
+//	"listen"
+//	l -> 1
+//	i -> 1
+//	s -> 1
+//	t -> 1
+//	e -> 1
+//	n -> 1
+//
+// Substring search visual:
+//
+//	text:    algorithms in go
+//	pattern: go
+//	         slide pattern across text until all chars match
 
 package algorithms
 
 import "fmt"
 
+// AreAnagrams increments counts for the first string and decrements for the
+// second. If any count goes negative, b used a character too many times.
 func AreAnagrams(a, b string) bool {
 	if len(a) != len(b) {
 		return false
@@ -29,6 +47,9 @@ func AreAnagrams(a, b string) bool {
 	return true
 }
 
+// IndexOf is the simple O(n*m) substring search.
+//
+// For each starting index in text, compare pattern character by character.
 func IndexOf(text, pattern string) int {
 	if pattern == "" {
 		return 0

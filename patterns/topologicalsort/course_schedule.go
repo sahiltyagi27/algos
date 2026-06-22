@@ -1,4 +1,22 @@
 // Package topologicalsort contains dependency-ordering patterns.
+//
+// Course Schedule visual:
+//
+//	prerequisites = [[1,0], [2,0], [3,1], [3,2]]
+//
+//	0 -> 1 -> 3
+//	 \       ^
+//	  v      |
+//	   2 ----+
+//
+// Indegree table:
+//
+//	course:   0  1  2  3
+//	indegree: 0  1  1  2
+//
+// Kahn's algorithm starts with courses that have indegree 0:
+//
+//	queue: [0]
 package topologicalsort
 
 // CanFinish returns true if all courses can be completed.
@@ -12,6 +30,13 @@ package topologicalsort
 //	Build graph and indegree counts.
 //	Repeatedly take nodes with indegree 0.
 //	If all nodes are processed, there is no cycle.
+//
+// Flow:
+//
+//	pop 0 -> reduce 1 and 2
+//	pop 1 -> reduce 3
+//	pop 2 -> reduce 3 to 0
+//	pop 3 -> all processed
 //
 // Time: O(V + E)
 // Space: O(V + E)
@@ -56,6 +81,14 @@ func CanFinish(numCourses int, prerequisites [][]int) bool {
 //	0 = unvisited
 //	1 = visiting, currently in recursion stack
 //	2 = visited, already proven safe
+//
+// DFS cycle visual:
+//
+//	0 -> 1
+//	^    |
+//	|____|
+//
+// If DFS reaches a "visiting" node again, the path loops back.
 //
 // If DFS reaches a node with state 1, there is a cycle.
 //

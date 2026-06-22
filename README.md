@@ -13,6 +13,7 @@ go test ./...
 
 | Topic | File |
 |---|---|
+| Core algorithms folder | [algorithms/README.md](algorithms/README.md) |
 | Linear search and binary search | [algorithms/search.go](algorithms/search.go) |
 | Bubble sort and merge sort | [algorithms/sort.go](algorithms/sort.go) |
 | Recursion | [algorithms/recursion.go](algorithms/recursion.go) |
@@ -54,6 +55,7 @@ Current examples:
 
 Additional NeetCode-style patterns live in:
 
+- [patterns/README.md](patterns/README.md)
 - [patterns/prefixsum](patterns/prefixsum)
 - [patterns/intervals](patterns/intervals)
 - [patterns/trie](patterns/trie)

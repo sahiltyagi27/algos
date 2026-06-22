@@ -5,13 +5,37 @@
 // Bubble sort:
 //   Simple learning algorithm. Time O(n^2). Rarely used in production.
 //
+// Visual:
+//
+//	[5, 1, 9, 3]
+//	 compare adjacent pairs
+//	 swap if left > right
+//
+// After one pass, the largest value bubbles to the end.
+//
 // Merge sort:
 //   Divide-and-conquer algorithm. Time O(n log n). Uses extra memory O(n).
+//
+// Visual:
+//
+//	[5, 1, 9, 3]
+//	    split
+//	[5, 1] [9, 3]
+//	    split
+//	[5] [1] [9] [3]
+//	    merge sorted pieces
+//	[1, 5] [3, 9]
+//	    merge
+//	[1, 3, 5, 9]
 
 package algorithms
 
 import "fmt"
 
+// BubbleSort repeatedly swaps adjacent out-of-order values.
+//
+// Inner loop shrinks each pass because the largest unsorted value is already
+// placed at the end.
 func BubbleSort(nums []int) []int {
 	out := append([]int(nil), nums...)
 
@@ -31,6 +55,7 @@ func BubbleSort(nums []int) []int {
 	return out
 }
 
+// MergeSort sorts each half, then merges two sorted halves.
 func MergeSort(nums []int) []int {
 	if len(nums) <= 1 {
 		return append([]int(nil), nums...)
@@ -42,6 +67,17 @@ func MergeSort(nums []int) []int {
 	return merge(left, right)
 }
 
+// merge combines two already-sorted slices.
+//
+// Visual:
+//
+//	left:  [1, 5]
+//	right: [3, 9]
+//
+//	compare 1 and 3 -> take 1
+//	compare 5 and 3 -> take 3
+//	compare 5 and 9 -> take 5
+//	append remaining 9
 func merge(left, right []int) []int {
 	result := make([]int, 0, len(left)+len(right))
 	i, j := 0, 0

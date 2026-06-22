@@ -25,6 +25,24 @@ So the graph edge is:
 0 -> 1
 ```
 
+Visual example:
+
+```text
+prerequisites = [[1,0], [2,0], [3,1], [3,2]]
+
+0 -> 1 -> 3
+ \       ^
+  v      |
+   2 ----+
+```
+
+Indegree table:
+
+```text
+course:   0  1  2  3
+indegree: 0  1  1  2
+```
+
 ## Approach 1: BFS / Kahn's Algorithm
 
 If a course has no prerequisites, it can be taken immediately.

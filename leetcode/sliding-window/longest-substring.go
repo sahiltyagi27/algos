@@ -1,4 +1,17 @@
 // Package slidingwindow contains sliding-window LeetCode patterns.
+//
+// Longest substring visual:
+//
+//	s = "abcabcbb"
+//
+//	window grows:
+//	[a]
+//	[a b]
+//	[a b c]
+//
+//	Next char 'a' repeats inside window, so move left after previous 'a':
+//
+//	[b c a]
 package slidingwindow
 
 // LengthOfLongestSubstring returns the longest substring length without repeats.

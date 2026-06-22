@@ -3,6 +3,17 @@ package stack
 
 // IsValidParentheses returns true when every opening bracket is closed in order.
 //
+// Visual:
+//
+//	input: "([])"
+//
+//	read '(' -> stack: [(]
+//	read '[' -> stack: [(, []
+//	read ']' -> pop '['
+//	read ')' -> pop '('
+//
+// valid if stack is empty at the end
+//
 // Pattern:
 //
 //	Push opening brackets on a stack.

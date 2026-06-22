@@ -1,4 +1,15 @@
 // Package hashmap contains hash-map based LeetCode patterns.
+//
+// Two Sum visual:
+//
+//	nums:   [2, 7, 11, 15]
+//	target: 9
+//
+//	At 2:
+//	  need 7, map is empty -> store 2 -> index 0
+//
+//	At 7:
+//	  need 2, map has 2 -> answer [0, 1]
 package hashmap
 
 // TwoSum returns indexes of two numbers that add up to target.

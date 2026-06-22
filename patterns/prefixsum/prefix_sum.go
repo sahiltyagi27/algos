@@ -1,4 +1,13 @@
 // Package prefixsum contains prefix-sum patterns.
+//
+// Prefix sum visual:
+//
+//	nums:   [2, 4, 6]
+//	prefix: [0, 2, 6, 12]
+//
+// Sum from index 1 to 2:
+//
+//	prefix[3] - prefix[1] = 12 - 2 = 10
 package prefixsum
 
 // RangeSum builds prefix sums and returns the sum from left to right inclusive.

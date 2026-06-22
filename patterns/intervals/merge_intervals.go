@@ -1,4 +1,11 @@
 // Package intervals contains interval-based patterns.
+//
+// Merge intervals visual:
+//
+//	input:  [1,3] [2,6] [8,10]
+//	             overlap
+//
+//	output: [1,6] [8,10]
 package intervals
 
 import "sort"

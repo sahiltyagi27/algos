@@ -3,6 +3,15 @@ package twopointers
 
 // MaxArea solves Container With Most Water.
 //
+// Visual:
+//
+//	left wall                 right wall
+//	   |                         |
+//	   v                         v
+//	height: [1,8,6,2,5,4,8,3,7]
+//
+// area = min(height[left], height[right]) * width
+//
 // Pattern:
 //
 //	Start at both ends. Area is limited by the shorter wall.

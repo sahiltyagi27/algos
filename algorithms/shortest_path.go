@@ -3,6 +3,20 @@
 // Dijkstra's algorithm finds shortest paths in a weighted graph with
 // non-negative edge weights.
 //
+// Visual:
+//
+//	A --4--> B
+//	A --2--> C
+//	B --5--> D
+//	C --8--> D
+//	D --2--> E
+//
+// Dijkstra keeps the best known distance from start to every node.
+//
+//	dist[A] = 0
+//	dist[B] = infinity
+//	dist[C] = infinity
+//
 // This example uses a simple O(V^2 + E) implementation for readability.
 // Production code often uses a priority queue for O((V+E) log V).
 
@@ -17,6 +31,13 @@ type WeightedEdge struct {
 
 type WeightedGraph map[string][]WeightedEdge
 
+// Dijkstra repeatedly chooses the unvisited node with the smallest known
+// distance, then relaxes its outgoing edges.
+//
+// Relax edge means:
+//
+//	if dist[current] + edge.Weight < dist[neighbor]
+//	update dist[neighbor]
 func Dijkstra(graph WeightedGraph, start string) map[string]int {
 	const infinity = int(^uint(0) >> 1)
 
@@ -45,6 +66,8 @@ func Dijkstra(graph WeightedGraph, start string) map[string]int {
 	return dist
 }
 
+// closestUnvisited scans all nodes to find the unvisited node with the smallest
+// distance. This keeps the implementation readable but costs O(V) per pick.
 func closestUnvisited(dist map[string]int, visited map[string]bool) string {
 	const infinity = int(^uint(0) >> 1)
 	bestNode := ""

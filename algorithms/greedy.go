@@ -4,6 +4,17 @@
 //
 // Greedy works when local choices lead to a global optimum. It is fast when
 // applicable, but proving correctness matters.
+//
+// Interval scheduling visual:
+//
+//	[1,3]  [3,5]  [5,9]
+//	  [2,4]
+//	[0,7]
+//
+// Greedy choice:
+//
+//	choose the interval that ends earliest,
+//	then choose the next compatible interval.
 
 package algorithms
 
@@ -19,6 +30,12 @@ type Interval struct {
 
 // MaxNonOverlappingIntervals chooses the interval that ends earliest, then
 // repeats. This is the classic activity-selection greedy strategy.
+//
+// Sort by End:
+//
+//	[1,3], [2,4], [3,5], [0,7], [5,9]
+//
+// Pick interval if interval.Start >= lastEnd.
 func MaxNonOverlappingIntervals(intervals []Interval) []Interval {
 	sorted := append([]Interval(nil), intervals...)
 	sort.Slice(sorted, func(i, j int) bool {

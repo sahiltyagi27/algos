@@ -1,7 +1,27 @@
 // Package mathgeometry contains math and geometry patterns.
+//
+// Euclid GCD visual:
+//
+//	GCD(24, 18)
+//	24 % 18 = 6
+//	18 % 6  = 0
+//	GCD = 6
+//
+// Rectangle overlap visual:
+//
+//	Rect format: [x1, y1, x2, y2]
+//
+//	Two rectangles overlap only if each one crosses the other's boundary on
+//	both axes.
 package mathgeometry
 
 // GCD returns the greatest common divisor using Euclid's algorithm.
+//
+// Repeatedly replace:
+//
+//	(a, b) with (b, a%b)
+//
+// until b becomes 0.
 func GCD(a, b int) int {
 	for b != 0 {
 		a, b = b, a%b

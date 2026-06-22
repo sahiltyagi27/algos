@@ -1,4 +1,15 @@
 // Package advancedgraphs contains advanced graph patterns.
+//
+// Bellman-Ford visual:
+//
+//	Relax every edge V-1 times.
+//
+//	Edge: u --w--> v
+//
+//	if dist[u] + w < dist[v]:
+//	    dist[v] = dist[u] + w
+//
+// After V-1 passes, one more improvement means there is a negative cycle.
 package advancedgraphs
 
 const Infinity = int(^uint(0) >> 1)

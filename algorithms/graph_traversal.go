@@ -3,8 +3,24 @@
 // BFS:
 //   Breadth-first search explores level by level using a queue.
 //
+// Visual:
+//
+//	      A
+//	    /   \
+//	   B     C
+//	  /       \
+//	 D         E
+//
+// BFS order:
+//
+//	A, B, C, D, E
+//
 // DFS:
 //   Depth-first search explores deeply using recursion or a stack.
+//
+// DFS order can be:
+//
+//	A, B, D, C, E
 
 package algorithms
 
@@ -12,6 +28,14 @@ import "fmt"
 
 type Graph map[string][]string
 
+// BFS uses a queue.
+//
+// Queue flow:
+//
+//	enqueue start
+//	pop front
+//	visit node
+//	enqueue unseen neighbors
 func BFS(graph Graph, start string) []string {
 	visited := map[string]bool{start: true}
 	queue := []string{start}
@@ -34,6 +58,13 @@ func BFS(graph Graph, start string) []string {
 	return order
 }
 
+// DFS uses recursion here.
+//
+// Recursion flow:
+//
+//	visit node
+//	recursively visit each unseen neighbor
+//	backtrack when no more neighbors exist
 func DFS(graph Graph, start string) []string {
 	visited := make(map[string]bool)
 	var order []string
@@ -77,6 +108,16 @@ func RunGraphTraversalDemo() {
 	fmt.Printf("surrounded city components => %d\n", CountSurroundedCityComponents(grid))
 }
 
+// CountSurroundedCities counts individual 1-cells that have 0 on all four
+// sides.
+//
+// Check directions:
+//
+//	    up
+//	left X right
+//	   down
+//
+// This is not component DFS. It checks each cell independently.
 func CountSurroundedCities(grid [][]int) int {
 	if len(grid) == 0 || len(grid[0]) == 0 {
 		return 0
@@ -113,6 +154,16 @@ func CountSurroundedCities(grid [][]int) int {
 	return count
 }
 
+// CountSurroundedCityComponents counts connected groups of 1s that do not touch
+// the boundary.
+//
+// Here DFS explores an entire component:
+//
+//	1 1 0
+//	0 1 0
+//
+// If any cell in the component touches boundary, the whole component is not
+// surrounded.
 func CountSurroundedCityComponents(grid [][]int) int {
 	if len(grid) == 0 || len(grid[0]) == 0 {
 		return 0
