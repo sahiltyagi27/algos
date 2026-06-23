@@ -14,6 +14,13 @@
 //	course:   0  1  2  3
 //	indegree: 0  1  1  2
 //
+// After the build loop, graph is an adjacency list:
+//
+//	graph[0] = [1, 2]  // course 0 unlocks courses 1 and 2
+//	graph[1] = [3]     // course 1 unlocks course 3
+//	graph[2] = [3]     // course 2 unlocks course 3
+//	graph[3] = []      // course 3 unlocks nothing
+//
 // Kahn's algorithm starts with courses that have indegree 0:
 //
 //	queue: [0]
